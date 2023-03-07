@@ -36,6 +36,14 @@ app.get('/hello', (req,res) => {
   res.send('<h1>TESTING WEB-SERVER</h1>')
 })
 
+app.get('/me', (req,res) => {
+  res.send(`
+       <h1>FULLNAME: Augustina Olawunmi Inumohi</h1>
+       <h1>STUDENT ID: S2232380</h1>
+  
+  `)
+})
+
 app.get('/image', (req,res) => {
   const imagePath = path.join(__dirname, 'images', 'image1.jpg')
   res.sendFile(imagePath)
