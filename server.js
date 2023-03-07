@@ -33,7 +33,12 @@ app.use(express.static(path.join(__dirname, 'public/')))
 app.use(logger('combined'))
 
 app.get('/hello', (req,res) => {
-  res.send('<h1>Octave Website API</h1> <a href="/api-docs">Documentation</a>')
+  res.send('<h1>TESTING WEB-SERVER</h1>')
+})
+
+app.get('/image', (req,res) => {
+  const imagePath = path.join(__dirname, 'images', 'image1.jpg')
+  res.sendFile(imagePath)
 })
 
 const port = process.env.PORT || 6000
