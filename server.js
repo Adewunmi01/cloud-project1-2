@@ -32,6 +32,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public/')))
 app.use(logger('combined'))
 
+app.get('/', (req,res) => {
+  res.send('<h1>TASK 1</h1>')
+})
+
 app.get('/hello', (req,res) => {
   res.send('<h1>TESTING WEB-SERVER</h1>')
 })
