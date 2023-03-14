@@ -1,5 +1,7 @@
 runtime: nodejs16
 
+service: task1
+
 handlers:
-- url: /.*
-  script: server.js
+  - url: /.*
+    script: server.js
